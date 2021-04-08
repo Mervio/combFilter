@@ -11,23 +11,20 @@ void combfiltr::do_combfiltr(){
         comb_q.push(0); 
 
         }
-
-        intg_q.push(0);
-
-        a = 0;
         y = 0;
-     }
-
-
+    }
+ 
     while(true){
+	cout<<"Comb Queue:"<<comb_q.front()<<endl<<"Integer Queue:"<<intg_q.front()<<endl;
+	cout<<"===================================="<<endl;
 
-        a = x + comb_q.remove();
+	comb_q.push(x);
+
+        y = (x - comb_q.front()) + y;
+
+	o_y.write(y);
         comb_q.pop();
-
-        y = a + intg_q.remove();
-        intg_q.pop();
-
-        
+	
         wait();
     }
 }

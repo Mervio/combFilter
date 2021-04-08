@@ -11,7 +11,9 @@ void tb::tb_source(){
         x.write(i);
         
         wait();
-        cout<<"i: "<< i<< " "<< y.read() << endl;
+	cout<<"=============================================="<<endl;
+        cout<<"i: "<< i<<endl<< "x:"<< x.read() << endl<<endl;
+	cout<<"Saida:"<<o_y.read()<<endl;
     }
     wait();
     sc_stop();
